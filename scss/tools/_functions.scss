@@ -1,0 +1,11 @@
+//font path
+$fonturl:'../fonts/';
+@function font($font){
+    @return url($fonturl + $font);
+}
+
+//img path
+$imgurl:'../images/';
+@function bg($img){
+    @return url($imgurl + $img);
+}

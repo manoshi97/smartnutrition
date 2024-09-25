@@ -1,0 +1,119 @@
+//extend
+%text {
+    color: $content-color;
+    font-family: $primary-font;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+%heading3 {
+    font-family: $secondary-font;
+    font-size: 26px;
+    font-weight: 500;
+    color: $primary-color; 
+    margin-bottom: 20px;
+    line-height: 36px;
+}
+
+%heading4 {
+    font-family: $secondary-font;
+    font-size: 20px;
+    font-weight: 500;
+    color: $primary-color;
+    margin-bottom: 15px;
+    line-height: 26px;
+}
+%button {
+    padding: 15px 50px;
+    background: $btn-color;
+    text-decoration: none;
+    font-size: 18px;
+    color: #FFF;
+    line-height: 24px;
+    display: inline-block;
+}
+
+//mixin
+@mixin bd-radius($value: 2px) {
+    -webkit-border-radius: $value;
+    -moz-border-radius: $value;
+    -o-border-radius: $value;
+    border-radius: $value;
+}
+
+//Media Query Manager
+/*
+0-480: small-phone
+480-640px: phone
+640-767: tablet portrait
+768-991: tablet landscape
+992-1199: small screen
+[1200-1800] is where our normal style apply
+1800+: big screen
+*/
+
+/* normal media query
+@mixin small-phone {
+    @media (max-width: 480px) { @content };
+}
+@mixin respond-phone {
+    @media (max-width: 640px) { @content };
+}
+@mixin respond-tab-port {
+    @media (max-width: 767px) { @content };
+}
+@mixin respond-tab-land {
+    @media (max-width: 991px) { @content };
+} 
+@mixin respond-small-screen {
+    @media (max-width: 1199px) { @content };
+} 
+
+*/
+
+/*Breakpoint argument choices:
+- small-phone
+- phone
+- tab-port
+- tab-land
+- small-screen
+- big-screen
+*/
+//media with condition
+@mixin respond($breakpoint) {
+    @if $breakpoint == small-phone {
+        @media (max-width: 480px) { @content };
+    }
+    @if $breakpoint == phone {
+        @media (max-width: 640px) { @content };
+    }
+    @if $breakpoint == tab-port {
+        @media (max-width: 767px) { @content };
+    }
+    @if $breakpoint == tab-land {
+        @media (max-width: 991px) { @content };
+    }
+    @if $breakpoint == small-screen {
+        @media (max-width: 1199px) { @content };
+    }
+    @if $breakpoint == big-screen {
+        @media (min-width: 1800px) { @content };
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

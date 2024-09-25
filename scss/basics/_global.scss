@@ -1,0 +1,42 @@
+/*================ Default styles ================*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+	padding: 0px;
+	margin: 0px;
+	font-family: $primary-font; 
+	color: $primary-color;
+}
+.clearfix {
+	clear:both;
+}
+h1, h2, h3, h4, h5, h6, p {margin: 0px;}
+img {max-width: 100%;}
+ul {margin: 0px; padding: 0px;}
+a {
+  background-color: transparent;
+}
+img {
+  max-width: 100%;
+  border: 0;
+}
+.container {
+	padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+    @media (min-width: 768px) {
+    	width: 750px;
+    }
+    @media (min-width: 992px) {
+    	width: 970px;
+    }
+    @media (min-width: 1200px) {
+    	width: 1170px;
+    }
+}
+
